@@ -9,8 +9,11 @@ const changeHeading = function(ev) {
   const goodOrEvil = f.goodOrEvil.value
 
   const spellsDiv = document.querySelector('#spells')
-  spellsDiv.innerHTML += `<li>${spellName} : ${goodOrEvil}</li>`
-
+  const newLi = document.createElement('li')
+  const spellInfo = document.createTextNode(`${spellName} : ${goodOrEvil}`)
+    newLi.appendChild(spellInfo)
+  //spellsDiv.innerHTML += `<li>${spellName} : ${goodOrEvil}</li>`
+    spellsDiv.appendChild(newLi)
   f.reset()
 }
 
