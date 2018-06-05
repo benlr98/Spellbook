@@ -10,10 +10,19 @@ const changeHeading = function(ev) {
 
   const spellsDiv = document.querySelector('#spells')
   const newLi = document.createElement('li')
-  const spellInfo = document.createTextNode(`${spellName} : ${goodOrEvil}`)
-    newLi.appendChild(spellInfo)
-  //spellsDiv.innerHTML += `<li>${spellName} : ${goodOrEvil}</li>`
+  const newSpan = document.createElement('span')
+  const newSpan2 = document.createElement('span')
+  const spellNameText = document.createTextNode(spellName)
+  const spellNameGE = document.createTextNode('${goodOrEvil}')
+    newSpan.appendChild(spellNameText)
+    newSpan2.appendChild(spellNameGE)
+    newLi.appendChild(newSpan)
     spellsDiv.appendChild(newLi)
+
+  //const spellInfo = document.createTextNode(`${spellName} : ${goodOrEvil}`)
+  //newLi.appendChild(spellInfo)
+  //spellsDiv.innerHTML += `<li>${spellName} : ${goodOrEvil}</li>`
+  //spellsDiv.appendChild(newLi)
   f.reset()
 }
 
