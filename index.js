@@ -6,13 +6,16 @@ function changeTextButton (){
     header2.textContent = 'Bumblebee'
     header3.textContent = 'Giraffe'
 }
-function submitText(){
-    const changingHeader = document.querySelector('#star')
-    const inputText = document.querySelector('#myForm')
-    changingHeader.textContent = alert(document.querySelector('#text'))
+const changeHeading = function(ev){
+    ev.preventDefault()
+    const f= ev.target
+    const spellName = f.spellName.value
+    document
+        .querySelector('h1#star')
+        .textContent = spellName
 }
 const button = document.querySelector('button')
-const submitButton = document.querySelector('#submitButton')
+const form = document.querySelector('form')
 button.addEventListener('click', changeTextButton)
-submitButton.addEventListener('click', submitText)
+form.addEventListener('submit', changeHeading)
 
