@@ -9,7 +9,7 @@ const changeHeading = function(ev) {
   const goodOrEvil = f.goodOrEvil.value
 
   const spellsDiv = document.querySelector('#spells')
-  spellsDiv.innerHTML += `<li>${spellName} ${goodOrEvil}</li>`
+  spellsDiv.innerHTML += `<li>${spellName} : ${goodOrEvil}</li>`
 
   f.reset()
 }
