@@ -1,3 +1,4 @@
+const array = []
 const app = {
     init: function() {
       const form = document.querySelector('form')
@@ -41,9 +42,12 @@ const app = {
   
       const spell = {
         name: f.spellName.value,
-        level: f.level.value,
+        level: f.level.value,  
       }
-  
+
+      array.unshift(f.spellName.value)
+      console.log(array)
+
       const item = this.renderItem(spell)
   
       const list = document.querySelector('#spells')
@@ -51,6 +55,11 @@ const app = {
   
       f.reset()
     },
-  }
-  
+
+    //storeSpell: function(spellArray){
+      //  const newSpell = document.querySelector('span.name')
+        //const addToArray = newSpell.textContent
+        //array.unshift(addToArray)
+    }
+
   app.init()
