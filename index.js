@@ -31,7 +31,11 @@ const app = {
       childElements.forEach(el => {
         item.appendChild(el)
       })
-  
+      
+      const button = item.appendChild(document.createElement('button'))
+      button.textContent = 'Delete'
+
+      
       return item
     },
   
@@ -42,7 +46,7 @@ const app = {
   
       const spell = {
         name: f.spellName.value,
-        level: f.level.value,  
+        level: f.level.value,
       }
 
       array.unshift(f.spellName.value)
