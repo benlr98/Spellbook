@@ -132,3 +132,11 @@ ul#spells {
   font-size: 0.7em;
   margin-top: -1rem;
 }
+
+.spellName {
+    font-size: 3rem;
+}
+
+.goodOrEvil {
+    color: red;
+}
