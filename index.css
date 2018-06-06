@@ -30,7 +30,7 @@ h1 {
   margin-left: 10vw;
   margin-top: 5vw;
   margin-bottom: 3vw;
-  color: rgba(0, 0, 0, 0.4);
+  color: black;
   font-size: 8vw;
 }
 
@@ -133,10 +133,10 @@ ul#spells {
   margin-top: -1rem;
 }
 
-.spellName {
+span.spellName {
     font-size: 3rem;
 }
 
-.goodOrEvil {
+span.goodOrEvil {
     color: red;
 }
