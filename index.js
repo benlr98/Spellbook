@@ -36,7 +36,6 @@ const app = {
       button.className = 'delButton'
       button.textContent = 'Delete'
       button.addEventListener('click', function(){
-          //const list = document.querySelector('#spells')
           while (this.parentNode !== null && this.parentNode.hasChildNodes){
               item.removeChild(this.parentNode.firstChild)
           }
