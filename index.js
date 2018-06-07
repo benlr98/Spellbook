@@ -37,17 +37,10 @@ const app = {
       button.textContent = 'Delete'
       button.addEventListener('click', function(){
           //const list = document.querySelector('#spells')
-          while (this.parentNode.hasChildNodes){
+          while (this.parentNode !== null && this.parentNode.hasChildNodes){
               item.removeChild(this.parentNode.firstChild)
           }
       })
-
-      /*
-            button.addEventListener('click', function(){
-          const list = document.querySelector('#spells')
-          while (this.parentNode.hasChildNodes){
-            item.removeChild(this.parentNode.firstChild)
-      */
 
       return item
     },
@@ -72,14 +65,6 @@ const app = {
   
       f.reset()
     },
-
-/*    deleteSpell: function() {
-        list = document.querySelector('ul.spells')
-        while (list.hasChildNodes()){
-            list.removeChild(list.firstChild)
-        }
-    },
-*/
 
     }
 
