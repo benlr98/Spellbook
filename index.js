@@ -33,9 +33,22 @@ const app = {
       })
       
       const button = item.appendChild(document.createElement('button'))
+      button.className = 'delButton'
       button.textContent = 'Delete'
+      button.addEventListener('click', function(){
+          //const list = document.querySelector('#spells')
+          while (this.parentNode.hasChildNodes){
+              item.removeChild(this.parentNode.firstChild)
+          }
+      })
 
-      
+      /*
+            button.addEventListener('click', function(){
+          const list = document.querySelector('#spells')
+          while (this.parentNode.hasChildNodes){
+            item.removeChild(this.parentNode.firstChild)
+      */
+
       return item
     },
   
@@ -60,10 +73,14 @@ const app = {
       f.reset()
     },
 
-    //storeSpell: function(spellArray){
-      //  const newSpell = document.querySelector('span.name')
-        //const addToArray = newSpell.textContent
-        //array.unshift(addToArray)
+/*    deleteSpell: function() {
+        list = document.querySelector('ul.spells')
+        while (list.hasChildNodes()){
+            list.removeChild(list.firstChild)
+        }
+    },
+*/
+
     }
 
   app.init()
