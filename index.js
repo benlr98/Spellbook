@@ -35,13 +35,15 @@ const app = {
       const button = item.appendChild(document.createElement('button'))
       button.className = 'delButton'
       button.textContent = 'Delete'
-      button.addEventListener('click', function(){
-          while (this.parentNode !== null && this.parentNode.hasChildNodes){
-              item.removeChild(this.parentNode.firstChild)
-          }
-      })
+      button.addEventListener('click', this.removeSpell)
 
       return item
+    },
+
+    removeSpell: function(ev){
+        const button = ev.target
+        const item = button.closest('.spell')
+        item.parentNode.removeChild(item)
     },
   
     handleSubmit: function(ev) {
